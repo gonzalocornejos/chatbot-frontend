@@ -1,0 +1,69 @@
+.pagina{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    height: 100vh; 
+    width: 100vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color:grey;
+}
+
+.areaMensaje{
+    background-color: white;
+    overflow-y: auto;
+    height: 60vh;
+    width: 80vw;
+    padding-bottom: 5vh;
+}
+
+.assistant{
+    display: flex;
+    flex-direction: column;
+    align-self: self-end;
+    background-color: yellow;
+    width: fit-content;
+    padding: 1vw;
+    border-radius: 2;
+}
+
+.user{
+    display: flex;
+    flex-direction: column;
+    align-self: self-start;
+    background-color: blueviolet;
+    width: fit-content;
+    padding: 1vw;
+    border-radius: 2;
+}
+
+.cajaAbajo{
+    background-color: green;
+}
+
+.texto{
+    color: white;
+    font: bold;
+}
+
+.boton{
+    background-color: blue;
+    border-radius: 3;
+}
+
+.boton:disabled{
+    opacity: 0;
+}
+
+.input{
+ color: black;
+ background-color: lightgray;
+ border-radius: 3;
+ text-decoration: none;
+}
+
+.input:focus{
+    outline: none;
+}
