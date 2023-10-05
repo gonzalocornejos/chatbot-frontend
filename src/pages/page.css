@@ -1,69 +1,120 @@
-.pagina{
+/* Estilos para la página en general */
+.pagina {
     display: flex;
     flex-direction: column;
-    align-self: center;
-    height: 100vh; 
-    width: 100vw;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    background-color:grey;
-}
-
-.areaMensaje{
-    background-color: white;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('/public/background.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* La imagen de fondo se mantiene fija */
+  }
+  
+  /* Estilos para el área de mensajes */
+  .areaMensaje {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
     overflow-y: auto;
-    height: 60vh;
+    max-height: 60vh;
     width: 80vw;
-    padding-bottom: 5vh;
-}
-
-.assistant{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    align-self: self-end;
-    background-color: yellow;
-    width: fit-content;
-    padding: 1vw;
-    border-radius: 2;
-}
-
-.user{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+  }
+  
+  /* Estilos para los mensajes del asistente */
+  .assistant {
+    background-color: #f0f0f0;
+    color: #333;
+    max-width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    align-self: flex-start;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Sombra derecha e inferior */
+    transition: box-shadow 0.3s ease; /* Transición suave en hover */
+  }
+  
+  .assistant:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Efecto en hover */
+  }
+  
+  /* Estilos para los mensajes del usuario */
+  .user {
+    background-color: #f4d942;
+    color: #333;
+    max-width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    align-self: flex-end;
+    box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.2); /* Sombra izquierda e inferior */
+    transition: box-shadow 0.3s ease; /* Transición suave en hover */
+  }
+  
+  .user:hover {
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3); /* Efecto en hover */
+  }
+  
+  /* Estilos para la caja de entrada de texto */
+  .cajaAbajo {
+    background-color: #f4d942;
     display: flex;
     flex-direction: column;
-    align-self: self-start;
-    background-color: blueviolet;
-    width: fit-content;
-    padding: 1vw;
-    border-radius: 2;
-}
-
-.cajaAbajo{
-    background-color: green;
-}
-
-.texto{
-    color: white;
-    font: bold;
-}
-
-.boton{
-    background-color: blue;
-    border-radius: 3;
-}
-
-.boton:disabled{
-    opacity: 0;
-}
-
-.input{
- color: black;
- background-color: lightgray;
- border-radius: 3;
- text-decoration: none;
-}
-
-.input:focus{
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 80vw;
+    transition: box-shadow 0.3s ease; /* Transición suave en hover */
+  }
+  
+  .cajaAbajo:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Efecto en hover */
+  }
+  
+  .texto {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .boton {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+  }
+  
+  .boton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .boton:hover {
+    background-color: #f4d942; /* Cambio de color en hover */
+    transform: scale(1.05); /* Efecto de escala en hover */
+  }
+  
+  .input {
+    color: #333;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 25px; /* Tamaño del texto aumentado */
+  }
+  
+  .input:focus {
     outline: none;
-}
+    border-color: #f4d942;
+  }
+  
